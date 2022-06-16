@@ -53,9 +53,11 @@ message in messages %} {% if category == "fail" %}
   </div>
   <div class="border-t border-gray-200">
     <dl>
-      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-        <dt class="text-sm font-medium text-black font-bold">Nom :</dt>
-        <dd class="mt-1 text-sm text-black">{{user.nom}}</dd>
+      <div
+        class="flex bg-gray-50 px-2 py-5 grid grid-cols-3 gap-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+      >
+        <dt class="text-sm font-medium text-black pt-2 font-bold">Nom :</dt>
+        <dd class="mt-1 text-sm text-black pt-1">{{user.nom}}</dd>
         <a href="/modifs/nom"
           ><button
             class="bg-gradient-to-r from-slate-400 to-neutral-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
@@ -65,11 +67,13 @@ message in messages %} {% if category == "fail" %}
         >
       </div>
       <hr />
-      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-        <dt class="text-sm font-medium text-black font-bold">
-          Adresse E-mail :
+      <div
+        class="bg-white flex px-2 py-5 grid grid-cols-3 gap-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+      >
+        <dt class="text-sm pt-2 font-medium text-black font-bold">
+          Adresse E-mail:
         </dt>
-        <dd class="mt-1 text-sm text-gray-900">{{user.email}}</dd>
+        <dd class="text-sm pt-2 text-gray-900">{{user.email}}</dd>
         <a href="/modifs/email"
           ><button
             class="bg-gradient-to-r from-slate-400 to-neutral-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
@@ -80,13 +84,15 @@ message in messages %} {% if category == "fail" %}
       </div>
       <hr />
       <div
-        class="bg-red flex flex-row bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+        class="flex flex-row bg-gray-50 px-2 py-5 grid grid-cols-3 gap-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
       >
-        <div class="text-sm font-medium text-black font-bold">Adresse :</div>
-        <div class="mt-1 text-sm text-gray-900">{{user.adresse}}</div>
+        <div class="text-sm pt-2 font-medium text-black font-bold">
+          Adresse:
+        </div>
+        <div class="mt-1 text-sm pt-1 text-gray-900">{{user.adresse}}</div>
         <a href="/modifs/adresse"
           ><button
-            class="bg-gradient-to-r from-slate-400 to-neutral-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
+            class="bg-gradient-to-r from-slate-400 to-neutral-900 text-white text-sm font-bold py-2 px-4 rounded-full"
           >
             Modifier
           </button></a
@@ -95,19 +101,18 @@ message in messages %} {% if category == "fail" %}
       <hr />
       <br />
       <div
-        class="bg-red flex flex-row bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+        class="flex gap-1 sm:gap-5 bg-gray-50 px-3 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
       >
-        <div class="text-sm font-medium text-black font-bold"></div>
-        <div class="mt-1 text-sm text-gray-900">
+        <div class="mt-1 sm:mt-0 text-sm text-gray-900">
           Vous pouvez modifier votre mot de passe actuel:
         </div>
-        <a href="/modifs/password"
-          ><button
-            class="bg-gradient-to-r from-slate-400 to-neutral-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
+        <a href="/modifs/password">
+          <button
+            class="bg-gradient-to-r from-slate-400 to-neutral-900 mb-2 text-white text-sm font-bold py-2 px-4 rounded-full"
           >
             Modifier mon mot de passe
-          </button></a
-        >
+          </button>
+        </a>
       </div>
       <hr />
     </dl>

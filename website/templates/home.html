@@ -59,7 +59,6 @@ content%} {% if id %}
       class="flex flex-col self-center max-w-prose items-stretch"
       method="POST"
     >
-      <h3 class="text-black self-center">Créer une nouvelle note</h3>
       <input
         class="rounded-lg h-4 p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
         placeholder="Donnez un titre à votre note"
@@ -72,18 +71,15 @@ content%} {% if id %}
       </button>
     </form>
   </div>
-  <div class="w-auto mt-6 shadow-md">
+  <div class="mt-6 shadow-md">
     <table class="text-sm text-left text-gray-500">
       <thead
         class="text-xs text-white uppercase border-b border-white bg-gradient-to-r from-slate-400 to-neutral-900"
       >
         <tr>
           <th class="px-6 py-3">Titre</th>
-          <th class="px-6 py-3">Auteur</th>
           <th class="px-6 py-3">Date de creation</th>
-          <th class="px-6 py-3">
-            <span class="sr-only">Edit</span>
-          </th>
+          <th class="px-6 py-3"></th>
         </tr>
       </thead>
       {% for note in user.notes %}
@@ -114,12 +110,11 @@ content%} {% if id %}
             <div>{{ note.titre }}</div>
             {% endif %}
           </th>
-          <td class="px-6 py-4">{{ user.nom }}</td>
           <td class="px-6 py-4">{{ note.date }}</td>
-          <td class="px-6 py-4 text-right">
+          <td class="flex flex-col gap-3 sm:flex-row px-6 py-4 text-right">
             <a
               href="/./{{ note.id }}"
-              class="font-medium text-white px-6 hover:underline"
+              class="font-medium text-white self-center hover:underline"
               >Edit
             </a>
             <a
